@@ -2,8 +2,9 @@
   <swiper ref="mySwiper" :options="swiperOption" class="swiper-container">
     <swiper-slide v-for="(item, i) in slides" :key="i" class="teacher-slide">
       <div class="teacher-box">
-        <img :src="item.img" :alt="item.alt" />
-        <p class="teacher-name">{{ item.alt }}</p>
+        <img :src="item.img" :alt="item.name" />
+        <p class="teacher-name">{{ item.name }}</p>
+        <p class="teacher-subject">{{ item.subject }}</p>
       </div>
     </swiper-slide>
     <div class="swiper-pagination" slot="pagination"></div>
@@ -27,6 +28,12 @@ export default {
           el: ".swiper-pagination",
         },
         loop: false,
+        breakpoints: {
+          1200: { slidesPerView: 4 },
+          1024: { slidesPerView: 3 },
+          768: { slidesPerView: 2 },
+          480: { slidesPerView: 1 },
+        },
       },
     };
   },
@@ -82,5 +89,11 @@ export default {
   font-size: 14px;
   font-weight: 600;
   color: #333;
+}
+
+.teacher-subject {
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
 }
 </style>

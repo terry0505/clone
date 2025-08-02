@@ -6,6 +6,7 @@
         <section class="main-left">
           <MainSlide />
           <MainTabs />
+          <TeacherPromoSection />
         </section>
         <aside class="main-right">
           <StickyPanel />
@@ -22,6 +23,7 @@ import RightQuickMenu from "@/components/RightQuickMenu.vue";
 import MainSlide from "@/components/MainSlide.vue";
 import MainTabs from "@/components/MainTabs.vue";
 import StickyPanel from "@/components/StickyPanel.vue";
+import TeacherPromoSection from "@/components/TeacherPromoSection.vue";
 
 export default {
   components: {
@@ -30,6 +32,7 @@ export default {
     MainSlide,
     MainTabs,
     StickyPanel,
+    TeacherPromoSection,
   },
 };
 </script>
