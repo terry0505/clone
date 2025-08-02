@@ -42,7 +42,7 @@ export default {
   },
   async created() {
     try {
-      const res = await axios.get("/api/main-slides");
+      const res = await axios.get(`${process.env.VUE_APP_API_BASE_URL}/api/main-slides`);
       this.slides = res.data;
     } catch (error) {
       console.error("메인 슬라이드 데이터를 불러오지 못했습니다.", error);

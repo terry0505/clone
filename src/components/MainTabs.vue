@@ -37,7 +37,7 @@ export default {
     };
   },
   created() {
-    axios.get("/api/main-tabs").then((res) => {
+    axios.get(`${process.env.VUE_APP_API_BASE_URL}/api/main-tabs`).then((res) => {
       this.tabs = res.data;
     });
   },

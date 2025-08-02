@@ -19,7 +19,7 @@ export default {
     };
   },
   created() {
-    axios.get("api/promo-list").then((res) => {
+    axios.get(`${process.env.VUE_APP_API_BASE_URL}/api/promo-list`).then((res) => {
       this.promoList = res.data;
     });
   },
