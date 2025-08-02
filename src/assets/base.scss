@@ -10,7 +10,11 @@
   --sobang-menuIcn-color2: #ff4141;
   --army-menuIcn-color1: #7a8e53;
 }
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 /* reset */
 html,
 body {
